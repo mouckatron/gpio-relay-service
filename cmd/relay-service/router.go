@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,6 +13,8 @@ var ginRouter *gin.Engine
 
 func setupGinRouter() {
 	ginRouter = gin.Default()
+
+	ginRouter.Use(cors.Default())
 
 	ginRouter.GET("/ping", ping)
 

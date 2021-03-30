@@ -1,0 +1,5 @@
+relays:
+- gpio: 26
+  name: Inverter
+- gpio: 27
+  name: Door Fans
